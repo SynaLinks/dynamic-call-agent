@@ -1,16 +1,16 @@
-// @desc: Try to call a existing program
+// @desc: Try to call an existing program
 CREATE
 (start:Control {name:"Start"}),
 (end:Control {name:"End"}),
 (call_program:Action {
-    name:"Call an existing program to fullfil the Objective", 
+    name:"Call an existing program to fulfill the Objective", 
     tool:"CallProgram",
-    prompt:"Please call the more appropriate program to fullfil the Objective.
+    prompt:"Please call the most appropriate program to fulfill the Objective.
 Please, only use the program name and remove any parameter or file extension (the `.cypher`).
 Remember to always try to call an existing program."}),
 (is_successfully_called:Decision {
-    name:"Check if the program have been successfuly called",
-    question:"The program have been successfuly called?"}),
+    name:"Check if the program has been successfully called",
+    question:"Has the program been successfully called?"}),
 (try_again:Action {
     name:"Correct the program name and try again",
     tool:"CallProgram",
