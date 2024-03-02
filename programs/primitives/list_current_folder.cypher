@@ -1,4 +1,4 @@
-// @desc: List the current folder using `ls` unix command
+// @desc: List the files inside the current folder
 CREATE
 (start:Control {name:"Start"}),
 (end:Control {name:"End"}),
